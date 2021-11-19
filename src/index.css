@@ -1,13 +1,1063 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*, *::after, *::before {
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1, h2, h3, h4 {
+    margin: 0;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: #fff;
+}
+
+.app  {
+    background-image: url(images/home/background-home-desktop.jpg);
+    height: 100vh;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg_destination {
+    background-image: url(images/destination/background-destination-desktop.jpg);
+}
+.bg_crew {
+    background-image: url(images/crew/background-crew-desktop.jpg);
+}
+.bg_technology {
+    background-image: url(images/technology/background-technology-desktop.jpg);
+}
+
+
+/* Header and Nav */
+
+.header {
+    padding: 30px 0;
+    padding-left: 50px;
+    display: flex;
+    width: 100%;
+    height: 95;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    width: 48px;
+    height: 48px;
+}
+
+.header__nav {
+    display: flex;
+    padding: 40px 125px 40px 75px;
+    background-color: #d0d6f918;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.header__nav::before {
+    position: absolute;
+    top: 48px;
+    left: -470px;
+    content: "";
+    display: block;
+    height: 1px;
+    width: 500px;
+    background-color: #d0d6f948;
+}
+
+.nav__item {
+    position: relative;
+    margin: 0 20px;
+    padding: 5px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2.7px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    transition: ease-in-out .2s;
+}
+
+.nav__item span{
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.nav__item::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -40px;
+    height: 0px;
+    width: 100%;
+    background-color: #fff;
+    transition: ease-in-out .2s;
+}
+
+.nav__item:hover::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -40px;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    opacity: .7;
+}
+
+.nav__item--active::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -40px;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+}
+
+/* height calc for content section */
+
+.home, .destination, .crew, .technology {
+    height: calc(100vh - 168.4px);
+}
+
+/* ------------ */
+
+
+/* Home page */
+
+.home {
+    display: flex;
+    align-items: center;
+    padding: 0 150px;
+}
+
+.home__description {
+    width: 50%;
+}
+
+.home__subtitle {
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 4.75px;
+    text-transform: uppercase;
+    color: #d0d6f9;
+    margin-bottom: 20px;
+}
+
+.home__title {
+    font-family: 'Bellefair', serif;
+    font-size: 150px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.home__paragraph {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+    color: #d0d6f9;
+    width: 33vw;
+    font-family: 'Barlow', sans-serif;
+}
+
+.home__cta {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.home__explore {
+    height: 274px;
+    width: 274px;
+    margin-top: 150px;
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 32px;
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #0B0D17;
+    outline: 0 solid #d0d6f93a;
+    transition: ease-in-out .3s;
+    cursor: pointer;
+}
+
+.home__explore:hover {
+    background-color: #ececec;
+    outline: 90px solid #d0d6f926;
+}
+
+/* Destination page */
+
+.destination {
+    padding: 55px 165px;
+}
+
+    /* this styles all headings for all sections */
+.destination__heading, .crew__heading, .technology__heading {
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 4.75px;
+    padding: 0;
+}
+
+.destination__heading span, .crew__heading span, .technology__heading span {
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.253);
+    margin-right: 20px;
+}
+    /* ------------------------- */
+
+.destinations {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.destination__img {
+    padding: 95px 55px;
+}
+
+.destination__info {
+    width: 50%;
+    padding: 10px 0 10px 50px;
+}
+
+.destination__nav {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.destination__nav li {
+    margin: 30px;
+    margin-left: 0;
+    cursor: pointer;
+    letter-spacing: 2.7px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.destination__title {
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    font-size: 100px;
+    text-transform: uppercase;
+}
+
+.destination__description {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+    color: #d0d6f9;
+}
+
+.destination__line {
+    display: block;
+    height: .5px;
+    width: 100%;
+    background-color: #d0d6f938;
+    margin-top: 50px;
+}
+
+.destination__stats {
+    display: flex;
+    text-transform: uppercase;
+}
+
+.destination__distance {
+    padding: 30px 30px 30px 0;
+}
+
+.destination__time {
+    padding: 30px 30px 30px 0;
+}
+
+.destination--active::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.stats__p {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2.36px;
+    color: #d0d6f9;
+}
+
+.stats__h3 {
+    font-family: 'Bellefair', serif;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+/* -------------------------------------- */
+
+/* Crew page */
+
+.crew {
+    padding: 55px 165px 0 165px;
+}
+
+/* *crew heading styles are defined with destination heading styles above* */
+
+.crew__members {
+    position: relative;
+    display: flex;
+}
+
+.crew__info {
+    width: 70%;
+    margin-top: 155px;
+}
+
+.crew__role {
+    font-family: 'Bellefair', serif;
+    font-size: 32px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffffff81;
+    margin-bottom: 15px;
+}
+
+.crew__name {
+    font-family: 'Bellefair', serif;
+    font-size: 56px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.crew__bio {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+    color: #d0d6f9;
+    padding-right: 50px;
+}
+
+.crew__nav {
+    display: flex;
+    position: absolute;
+    bottom: 95px;
+}
+
+.crew__nav span{
+    display: block;
+    height: 15px;
+    width: 15px;
+    background-color: rgba(255, 255, 255, 0.178);
+    border-radius: 50%;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.crew__nav .crew--active {
+    background-color: #ffffffe8;
+}
+
+.crew__img {
+    margin: -5px 0;
+    height: 648px;
+    width: auto;
+}
+
+/* Technology page */
+
+.technology {
+    padding: 55px 165px;
+    padding-right: 0;
+}
+
+.technologies {
+    display: flex;
+    align-items: center;
+}
+
+.technologies__info {
+    display: flex;
+}
+
+.technologies__nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.technologies__nav li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bellefair', serif;
+    font-size: 32px;
+    padding: 25px 35px;
+    border: 1px solid rgba(255, 255, 255, 0.253);
+    border-radius: 50%;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.technologies__nav li:last-child {
+    margin-bottom: 0;
+}
+
+.technologies__nav li:hover {
+    border-color: #ffffff;
+}
+
+.technologies--active {
+    background-color: #ffffff;
+    color: #0B0D17;
+    border-color: #ffffff;
+}
+
+.technologies__description {
+    padding: 0 80px;
+}
+
+.technologies__terminology {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+    color: #d0d6f9;
+    margin-bottom: 20px;
+}
+
+.technologies__name {
+    font-family: 'Bellefair', serif;
+    font-size: 56px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.technologies__paragraph {
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    line-height: 32px;
+    color: #d0d6f9;
+}
+
+
+/* --------------------- */
+
+/* ------------------------------------------------------------------------------ */
+
+
+/* MEDIA QUERIES */
+
+/* Tablet portrait */
+
+@media screen and (max-width: 1200px) {
+    .app {
+        background-image: url(images/home/background-home-tablet.jpg)
+    }
+
+    .bg_destination {
+        background-image: url(images/destination/background-destination-tablet.jpg);
+    }
+    .bg_crew {
+        background-image: url(images/crew/background-crew-tablet.jpg);
+    }
+    .bg_technology {
+        background-image: url(images/technology/background-technology-tablet.jpg);
+    }
+
+    /* HEADER AND NAV */
+
+    .header {
+        margin: 0;
+        padding: 0;
+    }
+
+    .header__logo {
+        margin-left: 40px;
+    }
+
+    .header__nav {
+        width: 450px;
+        margin: 0;
+        padding: 40px 15px;
+    }
+
+    .header__nav::before {
+        display: none;
+    }
+
+    .nav__item {
+        margin: 0 17px;
+    }
+
+    .nav__item {
+        font-size: 14px;
+    }
+
+    .nav__item span {
+        display: none;
+    }
+
+    .mobile_menu {
+        position: fixed;
+    }
+
+    /* -------------- */
+
+    /* height calc for content section */
+
+    .home, .destination, .crew, .technology {
+        height: calc(100vh - 106.1px);
+    }
+
+/* ------------ */
+
+
+    /* Home page */
+
+    .home {
+        height: calc(100vh - 106.1px);
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 40px;
+    }
+
+    .home__description {
+        width: 100%;
+    }
+
+    .home__paragraph {
+        width: 100%;
+        padding: 0 120px;
+    }
+
+    .home__cta {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .home__explore {
+        height: 242px;
+        width: 242px;
+        margin-top: 100px;
+    }
+
+    /* Destinations page */
+
+        /* Padding for content on all sections */
+
+    .destination, .crew, .technology {
+        padding: 40px;
+    }
+
+        /* this styles all headings for all sections */
+
+    .destination__heading, .crew__heading, .technology__heading {
+        font-size: 20px;
+    }
+
+        /* --------------------- */
+
+    .destinations {
+        flex-direction: column;
+        align-items: center;
+        margin: 60px 0;
+    }
+
+    .destination__img {
+        width: 300px;
+        height: auto;
+        padding: 0;
+    }
+    
+    .destination__nav li:last-child {
+        margin-right: 0;
+    }
+
+    .destination__info {
+        width: 100%;
+        padding: 0 60px;
+        text-align: center;
+    }
+
+    .destination__title {
+        font-size: 80px;
+    }
+
+    .destination__nav {
+        justify-content: center;
+    }
+
+    .destination__description {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .destination__line {
+        height: 1px;
+        margin-top: 20px;
+    }
+
+    .destination__stats {
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .destination__distance {
+        padding: 10px 0 10px 100px;
+    }
+    
+    .destination__time {
+        padding: 10px 100px 10px 0;
+    }
+
+    /* Crew page */
+
+    .crew__members {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 150px;
+        position: relative;
+        height: 100%;
+    }
+
+    .crew__info {
+        width: 100%;
+        margin-top: 60px;
+    }
+
+    .crew__role {
+        font-size: 24px;
+    }
+
+    .crew__name {
+        font-size: 40px;
+    }
+
+    .crew__bio {
+        font-size: 16px;
+        line-height: 28px;
+        padding: 0;
+        margin-bottom: 40px;
+    }
+
+    .crew__nav {
+        position: initial;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .crew__img {
+        height: 515px;
+        margin-bottom: -17px;
+        position: absolute;
+        bottom: 0;
+    }
+
+    /* Technology page */
+
+    .technologies {
+        flex-direction: column-reverse;
+    }
+
+    .technologies__img {
+        margin: 60px 0;
+    }
+
+    .technologies__info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .technologies__nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    .technologies__nav li {
+        padding: 0;
+        width: 60px;
+        height: 60px;
+        margin-bottom: 0;
+        margin-right: 15px;
+    }
+
+    .technologies__description {
+        margin-top: 45px;
+    }
+
+    .technologies__name {
+        font-size: 40px;
+    }
+
+    .technologies__paragraph {
+        padding: 0 50px;
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+
+    /* -------------------------- */
+}
+
+/* Mobile portrait */
+
+@media screen and (max-width: 600px) {
+
+    .app {
+        background-image: url(images/home/background-home-mobile.jpg);
+        height: 100%;
+        background-size: cover;
+        padding-bottom: 50px;
+    }
+
+    .bg_destination {
+        background-image: url(images/destination/background-destination-mobile.jpg);
+        padding-bottom: 320px;
+    }
+    .bg_crew {
+        background-image: url(images/crew/background-crew-mobile.jpg);
+        padding-bottom: 200px;
+    }
+    .bg_technology {
+        background-image: url(images/technology/background-technology-mobile.jpg);
+        padding-bottom: 100px;
+    }
+
+    .header {
+        padding: 25px;
+    }
+
+    .header__logo {
+        width: 40px;
+        height: 40px;
+        margin: 0;
+    }
+
+    
+    /* Mobile hamburger */
+    
+    .mobile__hamburger {
+        padding: 5px;
+    }
+    
+    .mobile__bar {
+        position: relative;
+        display: block;
+        width: 24px;
+        height: 3px;
+        margin: 6px;
+        background-color: #fff;
+        border-radius: 20px;
+        z-index: 2;
+        transform-origin: -1px 2px;
+        transition: ease-in-out .2s;
+    }
+
+    /* Style for close icon when menu is open */
+
+    .open .mobile__bar:first-child {
+        transform: rotate(45deg);
+    }
+    .open .mobile__bar:nth-child(2) {
+        opacity: 0;
+    }
+    .open .mobile__bar:last-child {
+        transform: rotate(-45deg);
+    }
+    
+    /* ------ */
+    
+    .mobile_menu {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 65%;
+        height: 100vh;
+        background-color: #d0d6f918;
+        backdrop-filter: blur(30px);
+        padding-top: 100px;
+        transition: ease-in-out .3s;
+        overflow: hidden;
+    }
+    
+    /* Styles for when menu is closed */
+    
+    .slide {
+        transform: translateX(100%);
+    }
+    
+    /* ------- */
+    
+    .nav__item:hover::after{ 
+        display: none;
+    }
+
+    .nav__item {
+        display: flex;
+        padding: 5px 10px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .nav__item span {
+        display: block;
+        margin-right: 10px;
+    }
+
+    .nav__item::after {
+        display: initial;
+        bottom: initial;
+        top: 0;
+        right: -16px;
+        height: 100%;
+        width: 0;
+    }
+
+    .nav__item--active::after {
+        display: initial;
+        bottom: initial;
+        top: 0;
+        right: -16px;
+        height: 100%;
+        width: 3px;
+    }
+
+    /* ------------------- */
+
+    /* this sets height for all pages */
+
+    .home, .destination, .crew, .technology {
+        height: calc(100vh - 93px);
+    }
+
+    /* ------------------- */
+
+    /* Home page */
+
+    .home {
+        padding: 20px 25px;
+    }
+
+    .home__subtitle {
+        font-size: 16px;
+    }
+
+    .home__title {
+        font-size: 80px;
+    }
+
+    .home__paragraph {
+        font-size: 15px;
+        padding: 0;
+    }
+
+    .home__explore {
+        height: 150px;
+        width: 150px;
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+    /* Destination page */
+
+    .destination {
+        padding: 25px 0;
+    }
+
+    .destination__heading {
+        text-align: center;
+        letter-spacing: 2.7px;
+    }
+
+    .destination__heading span {
+        margin-right: 15px;
+    }
+
+    .destination__img {
+        width: 170px;
+        height: auto;
+    }
+
+    .destination__nav li{
+        font-size: 14px;
+    }
+
+    .destination__info {
+        padding: 0 25px;
+    }
+
+    .destination__title {
+        font-size: 56px;
+    }
+
+    .destination__description {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .destination__distance {
+        padding: 10px;
+    }
+    
+    .destination__time {
+        padding: 10px;
+    }
+
+    .destination__stats {
+        flex-direction: column;
+    }
+
+    /* Crew page */
+    .crew {
+        text-align: center;
+    }
+
+    .crew__heading {
+        margin-bottom: 60px;
+    }
+
+    .crew_heading span {
+        margin-right: 15px;
+    }
+
+    .crew__members {
+        position: static;
+        padding: 0 10px;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .crew__img {
+        position: static;
+        padding: 0 25px;
+        height: 236px;
+        width: auto;
+        margin-bottom: 40px;
+        border-bottom: 1px solid #d0d6f934;
+    }
+
+    .crew__nav {
+        position: static;
+    }
+
+    .crew__nav span:last-child {
+        margin-right: 0;
+    }
+
+    .crew__info {
+        margin: 0;
+        position: static;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .crew__role {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .crew__name {
+        font-size: 24px;
+        margin: 0;
+    }
+
+    .crew__bio {
+        font-size: 15px;
+    }
+
+    /* Technology page */
+
+    .technology {
+        padding: 0 25px;
+    }
+
+    .technology__heading {
+        text-align: center;
+    }
+
+    .technology__heading span {
+        margin-right: 15px;
+    }
+
+    .technologies__img {
+        width: 100vw;
+        height: 170px;
+        margin: 35px 0;
+    }
+
+    .technologies__nav li {
+        height: 40px;
+        width: 40px;
+        font-size: 16px;
+    }
+
+    .technologies__nav li:last-child {
+        margin-right: 0;
+    }
+
+    .technologies__description {
+        margin-top: 25px;
+        padding: 0;
+    }
+
+    .technologies__terminology {
+        font-size: 14px;
+    }
+
+    .technologies__name {
+        font-size: 24px;
+    }
+
+    .technologies__paragraph {
+        padding: 0 8px;
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* ------------- */
+
+
+}
+
+
+/* This solves any responsive issues with longer phones */
+
+@media screen and (max-width: 600px) and (min-height: 680px) {
+    .home {
+        padding-top: 80px;
+    }
+    .home__explore {
+        margin-top: 80px;
+    }
 }
