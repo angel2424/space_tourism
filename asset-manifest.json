@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/space_tourism/static/css/main.0bf0db49.chunk.css",
-    "main.js": "/space_tourism/static/js/main.0a29848c.chunk.js",
-    "main.js.map": "/space_tourism/static/js/main.0a29848c.chunk.js.map",
+    "main.js": "/space_tourism/static/js/main.52bbb9cd.chunk.js",
+    "main.js.map": "/space_tourism/static/js/main.52bbb9cd.chunk.js.map",
     "runtime-main.js": "/space_tourism/static/js/runtime-main.df3c18e0.js",
     "runtime-main.js.map": "/space_tourism/static/js/runtime-main.df3c18e0.js.map",
     "static/js/2.f7f7f728.chunk.js": "/space_tourism/static/js/2.f7f7f728.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.df3c18e0.js",
     "static/js/2.f7f7f728.chunk.js",
     "static/css/main.0bf0db49.chunk.css",
-    "static/js/main.0a29848c.chunk.js"
+    "static/js/main.52bbb9cd.chunk.js"
   ]
 }
