@@ -1,9 +1,4 @@
-import { useEffect } from "react";
-
 const CrewMembers = ( {id, data, handleClick}) => {
-    useEffect(() => {
-        console.log(id)
-    })
 
     return ( 
         <div className="crew__members">

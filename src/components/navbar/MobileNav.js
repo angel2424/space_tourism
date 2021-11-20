@@ -12,7 +12,9 @@ const MobileNav = ({clickToggle}) => {
     const location = path.split('/')[1];
 
     useEffect(() => {
-        setIsOpen(!isOpen)
+        if(location === location) {
+            setIsOpen(false)
+        }
     },[location])
 
     return ( 
@@ -23,7 +25,7 @@ const MobileNav = ({clickToggle}) => {
                 <span className="mobile__bar"></span>
             </div>
             <div className={`mobile_menu ${isOpen ? '' : 'slide'} `}>
-                <NavLink className="nav__item" activeClassName="nav__item--active" exact to="/space_tourism"><span>00</span> Home </NavLink>
+                <NavLink className="nav__item" activeClassName="nav__item--active" exact to="/"><span>00</span> Home </NavLink>
                 <NavLink className="nav__item" activeClassName="nav__item--active" to="/destination"><span>01</span> Destination </NavLink>
                 <NavLink className="nav__item" activeClassName="nav__item--active" to="/crew"><span>02</span> Crew </NavLink>
                 <NavLink className="nav__item" activeClassName="nav__item--active" to="/technology"><span>03</span> Technology </NavLink>
