@@ -124,6 +124,12 @@ body {
     background-color: #fff;
 }
 
+.mobile__hamburger {
+    display: none;
+}
+
+/* ------ */
+
 /* height calc for content section */
 
 .home, .destination, .crew, .technology {
@@ -754,6 +760,7 @@ body {
     /* Mobile hamburger */
     
     .mobile__hamburger {
+        display: block;
         padding: 5px;
     }
     
@@ -784,7 +791,7 @@ body {
     
     /* ------ */
     
-    .mobile_menu {
+    .header__nav {
         display: flex;
         flex-direction: column;
         position: fixed;
