@@ -1,8 +1,8 @@
-# Weather website | [Visit live website](https://space.ardzcodes.tech)
+# Space Tourism | [Visit live website](https://space.ardzcodes.tech)
 
 </br>
 
-![Weather website design](https://res.cloudinary.com/dpnv2uar8/image/upload/v1673844884/space_tourism_ftib4d.png)
+![Space Tourism website design](https://res.cloudinary.com/dpnv2uar8/image/upload/v1673844884/space_tourism_ftib4d.png)
 
 ## Project Description
 
